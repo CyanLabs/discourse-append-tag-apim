@@ -4,11 +4,12 @@
 # about: Appends the apim tag to sync1,sync2,sync3,sync4 tagged topics
 # version: 0.1
 # authors: CyanLabs
+# url: https://github.com/CyanLabs/discourse-append-tag-apim
 
 after_initialize do
   DiscourseEvent.on(:topic_created) do |topic|
     guardian = Guardian.new(Discourse.system_user)
-    required_tag_names = ["sync1", "sync2", "sync3", "sync4"]
+    required_tag_names = ["sync1", "sync2", "sync3", "sync4", "SYNC1", "SYNC2", "SYNC3", "SYNC4"]
     DiscourseTagging.tag_topic_by_names(topic, guardian, ["apim"], append: true) if topic.tags.exists?(name: required_tag_names)
   end
 end
