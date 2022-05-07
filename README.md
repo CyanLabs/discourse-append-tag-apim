@@ -1,2 +1,4 @@
-# discourse-append-tag-apim-main
- This simple plugin adds the tag "unhandled" to every topic if there is a non-staff reply.
+## discourse-append-tag-apim
+
+Simple plugin that appends the apim tag to sync1,sync2,sync3,sync4 tagged topics
+
